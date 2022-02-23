@@ -1,0 +1,13 @@
+let
+    
+    Products = Product_Names,
+    #"Added Custom" = Table.AddColumn(Products, "Custom", each 1),
+    FirstColumn = Table.ColumnNames ( Products ){0},
+    #"Grouped Rows" = Table.Group(#"Added Custom", {"Custom"}, {{"Count", each Text.Combine(Record.Field(_, FirstColumn), """, """ ), type text}}),
+    #"Added Custom1" = Table.AddColumn(#"Grouped Rows", "Column", each Text.Combine({"{""data"": [""", [Count], """]}"}), type text),
+    #"Removed Other Columns" = Table.SelectColumns(#"Added Custom1",{"Column"}),
+    list = Table.ToRecords(#"Removed Other Columns"),
+    record = list{0},
+    fieldaccess = record[Column]
+in
+    fieldaccess

@@ -1,0 +1,16 @@
+let
+    url = "https://pytorch-flask-heroku.herokuapp.com/predictjson",
+    headers = [#"Content-Type" = "application/json", #"Accept" = "application/json"],
+    
+    fieldaccess = querystring,
+    postData = fieldaccess,
+    response = Web.Contents(
+        url,
+        [
+            Headers = headers,
+            Content = Text.ToBinary(postData)
+        ]
+    )
+    
+in
+    response
