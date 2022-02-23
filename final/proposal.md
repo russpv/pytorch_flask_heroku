@@ -5,7 +5,7 @@ Russell Peavey
 To combine its separate global regions on one ERP system, a B2B industrial company must design a universal product catalog and reassign all of its thousands of products into the new classification.
 
 # Data
-The primary source will be several previous data construction tables in Excel workbooks from the client, and an exhaustive list of unassigned products. The products will number in the thousands.  
+The primary source will be several previous data construction tables in Excel workbooks from the client, and an exhaustive list of unassigned products. The products will number in the tens of thousands.  
 
 # Tools
 
