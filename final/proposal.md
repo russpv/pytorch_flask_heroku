@@ -1,4 +1,4 @@
-# [Name]
+# NLP Neural Net Product Classifier
 Russell Peavey
 
 # Need
